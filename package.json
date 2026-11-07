@@ -1,0 +1,13 @@
+{
+  "name": "split-exp",
+  "private": true,
+  "scripts": {
+    "build": "esbuild web/src/main.js --bundle --minify --format=iife --target=es2020,safari14 --charset=utf8 --outfile=public/assets/app.js && esbuild web/src/admin.js --bundle --minify --format=iife --target=es2020,safari14 --charset=utf8 --outfile=public/assets/admin.js && esbuild web/src/style.css --bundle --minify --outfile=public/assets/app.css && esbuild web/src/admin.css --bundle --minify --outfile=public/assets/admin.css"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.12"
+  },
+  "dependencies": {
+    "qrcode-generator": "^1.4.4"
+  }
+}
